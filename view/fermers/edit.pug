@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Edit Farmer
+  form(action=`/farmers/${farmer.id}`, method="POST")
+    input(type="text", name="name", value=farmer.name)
+    input(type="email", name="email", value=farmer.email)
+    button(type="submit") Update
+
+
