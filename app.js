@@ -1,46 +1,27 @@
-const express = require('express');
-const path = require('path');
+// express web app instance
+const express = require('express')
+
+// parse request body to json
+const body_parser = require('body-parser')
+
+// for File IO
+const path = require('path')
+
+// for web routing
+const web_route = require('./routes/web')
+
+// make mock database (raw .json file) available globally in app
+global.mock_db = path.join(__dirname, './data/mock_db.json');
+
 const app = express();
 
-// Set up middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Set up view engine and views directory
-app.set('views', path.join(__dirname, 'views'));
+// Set the view engine for web routes
 app.set('view engine', 'pug');
 
-// Define routes
-const indexRouter = require('./routes/index.js');
+app.use('/css', express.static('public/css'))
+app.use('/js', express.static('public/js'))
 
-const productsRouter = require('./routes/products.js');
+app.use('/', web_route); // web routes
 
-app.use('/', indexRouter);
-
-app.use('/products', productsRouter);
-
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-
-});
-
-
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
-// Making database (raw .json file) available globally in app
-global.database = path.join(__dirname, './data/database.json');
-
-
-// to redirect to home page when  unknown requested 
-app.use((req, res) => {
-    res.redirect('/');
-});
-
-
+const port = 3000;
+app.listen(port, () => console.log(`Server running on port ${port}`));
