@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title Farmer's Sale Management
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z", crossorigin="anonymous")
+  body
+    .container
+      h1.text-center.my-4 Farmer's Sale Management
+      .row
+        .col-md-3
+          ul.list-group
+            li.list-group-item.active Actions
+            li.list-group-item Add Product
+            li.list-group-item Edit Product
+            li.list-group-item Delete Product
+        .col-md-9
+          form
+            .form-group
+              label(for="productName") Product Name
+              input#productName.form-control(type="text", placeholder="Enter product name")
+            .form-group
+              label(for="productDescription") Product Description
+              textarea#productDescription.form-control(rows="3")
+            .form-group
+              label(for="productPrice") Product Price
+              input#productPrice.form-control(type="number", step="0.01", placeholder="Enter product price")
+            button.btn.btn-primary(type="submit") Submit

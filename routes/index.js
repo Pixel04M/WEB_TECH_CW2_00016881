@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-// Define routes for the base URL '/'
-router.get('/', (req, res) => {
-  res.send('Welcome to the Farmers Market Online Directory');
-});
+// Import index controller
+const indexController = require('../controllers/index');
 
-module.exports = router;
+// Define routes
+router.get('/', indexController.homePage); // Home page route
+router.get('/about', indexController.aboutPage); // About page route
+router.get('/contact', indexController.contactPage); // Contact page route
+
+module.exports = router; // Export router

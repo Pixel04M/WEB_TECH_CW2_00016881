@@ -1,9 +1,15 @@
-const indexController = require('./indexController');
-const farmersController = require('./farmersController');
-const productsController = require('./productsController');
-
-module.exports = {
-  index: indexController,
-  farmers: farmersController,
-  products: productsController
-};
+// Controller logic for index routes
+const indexController = {
+    homePage: (req, res) => {
+      res.render('index', { title: 'Home' }); // Render home page view
+    },
+    aboutPage: (req, res) => {
+      res.render('about', { title: 'About' }); // Render about page view
+    },
+    contactPage: (req, res) => {
+      res.render('contact', { title: 'Contact' }); // Render contact page view
+    }
+  };
+  
+  module.exports = indexController; // Export controller
+  

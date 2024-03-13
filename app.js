@@ -12,9 +12,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 // Define routes
-const indexRouter = require('./routes/index');
-const farmersRouter = require('./routes/farmers');
-const productsRouter = require('./routes/products');
+const indexRouter = require('./routes/index.js');
+const farmersRouter = require('./routes/farmers.js');
+const productsRouter = require('./routes/products.js');
 
 app.use('/', indexRouter);
 app.use('/farmers', farmersRouter);
@@ -26,7 +26,11 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
+// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+// Making database (raw .json file) available globally in app
+global.mock_db = path.join(__dirname, './data/database.json');
