@@ -1,13 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const productController = require('../controllers/productController');
 
-const productsController = require('../controllers/productsController');
+// GET request to render the add product form
+router.get('/add', productController.renderAddProductForm);
 
-// Define routes for products
-router.get('/', productsController.getAllProducts);
-router.get('/:id', productsController.getProductById);
-router.post('/', productsController.createProduct);
-router.put('/:id', productsController.updateProduct);
-router.delete('/:id', productsController.deleteProduct);
+// POST request to handle the form submission for adding a new product
+router.post('/add', productController.addProduct);
 
 module.exports = router;

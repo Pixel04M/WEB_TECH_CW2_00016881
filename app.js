@@ -13,18 +13,20 @@ app.set('view engine', 'pug');
 
 // Define routes
 const indexRouter = require('./routes/index.js');
-const farmersRouter = require('./routes/farmers.js');
+
 const productsRouter = require('./routes/products.js');
 
 app.use('/', indexRouter);
-app.use('/farmers', farmersRouter);
+
 app.use('/products', productsRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
+
 });
+
 
 // Start the server
 const PORT = process.env.PORT || 3000;
@@ -33,4 +35,12 @@ app.listen(PORT, () => {
 });
 
 // Making database (raw .json file) available globally in app
-global.mock_db = path.join(__dirname, './data/database.json');
+global.database = path.join(__dirname, './data/database.json');
+
+
+// to redirect to home page when  unknown requested 
+app.use((req, res) => {
+    res.redirect('/');
+});
+
+
