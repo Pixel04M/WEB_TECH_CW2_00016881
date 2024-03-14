@@ -1,6 +1,32 @@
 include ./head.pug
 body
   .container.mt-5
+    h2 Add Product:
+    form(action="/add-product", method="POST")
+      div.form-group
+        label(for="productName") Product Name:
+        input#productName.form-control(type="text", name="productName", required)
+      div.form-group
+        label(for="harvestDate") Harvest Date:
+        input#harvestDate.form-control(type="date", name="harvestDate", required)
+      div.form-group
+        label(for="farmLocation") Farm Location:
+        input#farmLocation.form-control(type="text", name="farmLocation", required)
+      div.form-group
+        label(for="contactPhone") Contact Phone:
+        input#contactPhone.form-control(type="tel", name="contactPhone", required)
+      div.form-group
+        label(for="quantity") Quantity:
+        input#quantity.form-control(type="number", name="quantity", required)
+      button.btn.btn-primary(type="submit") Add
+
+    h2 Delete Product:
+    form(action="/delete-product", method="POST")
+      div.form-group
+        label(for="productId") Product ID:
+        input#productId.form-control(type="number", name="productId", required)
+      button.btn.btn-danger(type="submit") Delete
+
     h1 Farmer's Product List
     table.table.table-bordered.table-striped
       thead
@@ -23,11 +49,3 @@ body
           td
             button.btn.btn-primary.btn-sm Edit
             button.btn.btn-danger.btn-sm Delete
-
-    h2 Product List :
-    ul.list-group
-      li.list-group-item Pupkins
-      li.list-group-item Tomatos 
-      li.list-group-item Potato
-      li.list-group-item Carrot
-    
