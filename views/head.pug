@@ -5,6 +5,10 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     title Farmer's Sale Management
     link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z", crossorigin="anonymous")
+    script.
+      function showMessage() {
+        alert("Form submitted!");
+      }
   body
     .container
       h1.text-center.my-4 Farmer's Sale Management
@@ -16,7 +20,7 @@ html(lang="en")
             li.list-group-item Edit Product
             li.list-group-item Delete Product
         .col-md-9
-          form
+          form(onsubmit="showMessage(); return false;")
             .form-group
               label(for="productName") Product Name
               input#productName.form-control(type="text", placeholder="Enter product name")
