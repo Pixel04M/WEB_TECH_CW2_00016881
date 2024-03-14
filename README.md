@@ -73,8 +73,11 @@ The Local Farmers Market Online Directory relies on the following dependencies:
 
   /views
     index.pug -- written in Jade (now known as Pug) and it includes a table with some sample data and buttons for editing and deleting
-    layout.pug -- writted=n inn JADE which  It includes a doctype declaration, an HTML structure with a head and body section, and a block for content. The file path is specified as "/workspaces/WEB_TECH_CW2_00016881/views/layout.pug"
+    layout.pug -- writted=n inn JADE which  It includes a doctype declaration, an HTML structure with a head and body section, and a block for content. The file path is specified as /views/layout.pug"
     head.pug -- written in Jade (now known as Pug) and it represents a basic HTML structure with a form for adding a product. The code includes a doctype declaration, a head section with meta tags and stylesheets, a body section with a container, a heading, and a form. The form includes input fields for product name, description, and price, as well as a submit button
     /products
        products.pug - views of products 
+/validator 
+  /product 
+   index.js -- to export a JavaScript function called addProductValidation from the current module. This allows other modules or files to import and use this function in their own code. The code is using the module.exports syntax to make the addProductValidation function accessible to other parts of the project.
 ....
