@@ -11,22 +11,21 @@ The Local Farmers Market Online Directory is a web-based platform designed to co
 1. Clone the Repository:
    
     git clone <https://github.com/Pixel04M/WEB_TECH_CW2_00016881.git>
-    ```
+ 
 
 2. Navigate to the Project Directory:
    
     cd local-farmers-market-directory
-    ```
+
 
 3. Install Dependencies:
  
     npm install
-    ```
 
 4. Start the Application:
    
     npm start
-    ```
+  
 
 5. Access the Application:
     Open your web browser and go to http://localhost:3000 to view the application.
@@ -54,18 +53,18 @@ The Local Farmers Market Online Directory relies on the following dependencies:
 
  /routes
     
-   /products-- The code imports the express module, which is a popular framework for building web applications Nodejs
+  /products-- The code imports the express module, which is a popular framework for building web applications Nodejs
     index.js --  JavaScript file that defines routes for an Express.js application. It exports a router object that handles different HTTP requests
     /api
-    /product
-    index.js - to define and export an Express router for handling API routes related to products. It is a part of a larger project that involves JavaScript and npm (Node Package Manager)
+     /product
+       index.js - to define and export an Express router for handling API routes related to products. It is a part of a larger project that involves JavaScript and npm (Node Package Manager)
 
   /controllers
     index.js --  used to a controller logic for index routes in a Node.js application. It exports an object called indexController with three methods: homePage, aboutPage, and contactPage. Each method renders a different view template with a specified title. The controller is then exported for use in other parts of the application.
     productsController.js --  set of controller functions for handling CRUD operations on products. The functions are responsible for retrieving all products, retrieving a product by ID, creating a new product, updating product details, and deleting a product. They utilize the productsService module to perform the necessary operations on the products.
-    /api 
-    /product
-    index.js -- to define a controller object for handling requests related to products in a JavaScript project.
+     /api 
+      /product
+        index.js -- to define a controller object for handling requests related to products in a JavaScript project.
 
   /services
     productsService.js -- module for a product service in JavaScript. It exports several functions for managing products, including getting all products, getting a product by ID, creating a new product, updating product details, and deleting a product. The product data is stored in an array called products
