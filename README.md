@@ -3,6 +3,13 @@
 ## About the App:
 The Local Farmers Market Online Directory is a web-based platform designed to connect local farmers with consumers. Farmers can create listings for their products, providing details such as product name, description, availability, and pricing. Consumers can browse through these listings, read about the products, and place orders directly through the platform. Additionally, farmers have the ability to update product availability and details in real-time and remove listings for products that are sold out or no longer offered.
 
+## Public Repository and Hosted Apllication LINKS:
+
+GITHUB REPOSIRORY: https://github.com/Pixel04M/WEB_TECH_CW2_00016881.git
+
+HOSTED LINK: https://farmersonlinemarket-f9dc6abdb2c8.herokuapp.com/
+
+
 ## How to Run the App Locally:
 ### Prerequisites:
 - Node.js installed on your machine
@@ -30,7 +37,9 @@ The Local Farmers Market Online Directory is a web-based platform designed to co
 5. Access the Application:
     Open your web browser and go to http://localhost:3000 to view the application.
 
-## Application Dependencies:
+
+
+## Public Repository and Hosted Apllication LINKS:
 The Local Farmers Market Online Directory relies on the following dependencies:
 - Node.js: JavaScript runtime environment.
 - Express.js: Web application framework for Node.js.
