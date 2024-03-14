@@ -54,7 +54,7 @@ The Local Farmers Market Online Directory relies on the following dependencies:
 
  /routes
     
-    /products-- The code imports the express module, which is a popular framework for building web applications Nodejs
+   /products-- The code imports the express module, which is a popular framework for building web applications Nodejs
     index.js --  JavaScript file that defines routes for an Express.js application. It exports a router object that handles different HTTP requests
     /api
     /product
