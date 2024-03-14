@@ -1,25 +1,33 @@
 include ./head.pug
 body
   .container.mt-5
-    h1 List
-    table.table.table-responsive.table-hover.table-striped.table-dark
+    h1 Farmer's Product List
+    table.table.table-bordered.table-striped
       thead
         tr
           th(scope="col") ID
-          th(scope="col") Event Name
-          th(scope="col") Event DateTime
-          th(scope="col") Venue
+          th(scope="col") Product Name
+          th(scope="col") Harvest Date
+          th(scope="col") Farm Location
           th(scope="col") Contact Phone
-          th(scope="col") Seat
+          th(scope="col") Quantity
           th(scope="col") Actions
       tbody
         tr
           td 1
-          td Example Event Name 1
-          td 2024-02-17 10:00
-          td Example Venue
+          td Example Product Name 1
+          td 2024-02-17
+          td Example Farm Location
           td +1234567890
           td 42
           td
             button.btn.btn-primary.btn-sm Edit
             button.btn.btn-danger.btn-sm Delete
+
+    h2 Product List :
+    ul.list-group
+      li.list-group-item Pupkins
+      li.list-group-item Tomatos 
+      li.list-group-item Potato
+      li.list-group-item Carrot
+    

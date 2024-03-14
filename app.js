@@ -13,11 +13,11 @@ app.set('view engine', 'pug');
 
 // Define routes
 const indexRouter = require('./routes/index.js');
-const farmersRouter = require('./routes/farmers.js');
+
 const productsRouter = require('./routes/products.js');
 
 app.use('/', indexRouter);
-app.use('/farmers', farmersRouter);
+
 app.use('/products', productsRouter);
 
 // Error handling middleware
